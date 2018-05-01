@@ -1,9 +1,12 @@
 package com.shiliu.notepad.jpa.repository;
 
-import com.shiliu.notepad.common.basejpa.BaseRepository;
 import com.shiliu.notepad.jpa.entity.UserEntity;
+import com.shiliu.notepad.jpa.repository.expand.ExpandJpaRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepository extends BaseRepository<UserEntity,String> {
+@Repository
+public interface UserRepository extends JpaRepository<UserEntity,String> {
 
     UserEntity findByUserName(String userName);
 
